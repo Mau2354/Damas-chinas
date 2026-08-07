@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Damas Chinas</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="mesa">
+  <div class="cartel">
+    <h1>Damas Chinas</h1>
+  </div>
+
+  <div class="barra-estado">
+    <div class="indicador-turno">
+      <div class="punto-turno red" id="puntoTurno"></div>
+      <span id="textoTurno">Turno de Rojas</span>
+    </div>
+    <div class="controles">
+      <select id="selectorModo" title="Modo de juego">
+        <option value="bot" selected>Vs. Bot</option>
+        <option value="versus">Modo Versus (2 jugadores)</option>
+      </select>
+      <select id="selectorDificultad" title="Dificultad">
+        <option value="1">Fácil</option>
+        <option value="3" selected>Medio</option>
+        <option value="5">Difícil</option>
+      </select>
+      <button id="botonNuevaPartida">Nueva Partida</button>
+    </div>
+  </div>
+
+  <div class="marco-tablero">
+    <div class="tablero" id="tablero"></div>
+    <div class="pensando" id="pensando">...!!???&hellip;</div>
+  </div>
+
+  <div class="rieles">
+    <div class="riel" id="rielRojas">
+      <div class="etiqueta-riel">Rojas capturadas</div>
+    </div>
+    <div class="riel" id="rielNegras">
+      <div class="etiqueta-riel">Negras capturadas</div>
+    </div>
+  </div>
+
+  <div class="banner-ganador" id="bannerGanador"></div>
+</div>
+
+<script src="js/bot.js"></script>
+<script src="js/Juego.js"></script>
+</body>
+</html>
