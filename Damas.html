@@ -5,32 +5,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Damas Chinas</title>
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" id="temaVinculo" href="css/tema-nogal.css">
 </head>
-<body>
+<body data-piezas="gradiente">
+
+<div class="aviso-imagen oculto" id="avisoImagen"></div>
 
 <div class="mesa">
   <div class="cartel">
     <h1>Damas Chinas</h1>
   </div>
 
+  <div class="enfrentamiento" id="enfrentamiento"></div>
+
   <div class="barra-estado">
     <div class="indicador-turno">
       <div class="punto-turno red" id="puntoTurno"></div>
+      <span class="avatar-turno" id="avatarTurno"></span>
       <span id="textoTurno">Turno de Rojas</span>
     </div>
     <div class="controles">
-      <select id="selectorModo" title="Modo de juego">
-        <option value="bot" selected>Vs. Bot</option>
-        <option value="versus">Modo Versus (2 jugadores)</option>
+      <select id="selectorEstiloFichas" title="Estilo de fichas">
+        <option value="gradiente" selected>Fichas con gradiente</option>
+        <option value="plano">Colores fijos</option>
+        <option value="figuras">Fichas con figuras</option>
       </select>
-      <select id="selectorDificultad" title="Dificultad">
-        <option value="1">Fácil</option>
-        <option value="3" selected>Medio</option>
-        <option value="5">Difícil</option>
-      </select>
-      <button id="botonNuevaPartida">Nueva Partida</button>
+      <button id="botonTema" class="boton-tema" type="button" title="Cambiar estilo de tablero"></button>
+      <button id="botonNuevaPartida" type="button">Nueva Partida</button>
     </div>
   </div>
+  
+  <input type="file" id="inputImagenRoja" accept="image/*" hidden>
+  <input type="file" id="inputImagenNegra" accept="image/*" hidden>
 
   <div class="marco-tablero">
     <div class="tablero" id="tablero"></div>
@@ -39,14 +45,58 @@
 
   <div class="rieles">
     <div class="riel" id="rielRojas">
-      <div class="etiqueta-riel">Rojas capturadas</div>
+      <div class="etiqueta-riel">Fichas rojas capturadas</div>
     </div>
     <div class="riel" id="rielNegras">
-      <div class="etiqueta-riel">Negras capturadas</div>
+      <div class="etiqueta-riel">Fichas negras capturadas</div>
     </div>
   </div>
 
   <div class="banner-ganador" id="bannerGanador"></div>
+</div>
+
+<div class="modal-overlay oculto" id="modalConfiguracion">
+  <div class="modal-caja">
+    <h2>Configurar Partida</h2>
+
+    <div class="campo-modal">
+      <label for="modalModo">Modo de juego</label>
+      <select id="modalModo">
+        <option value="bot" selected>Vs. Bot</option>
+        <option value="versus">Modo Versus (2 jugadores)</option>
+      </select>
+    </div>
+
+    <div class="campo-modal">
+      <label for="modalNombreRojo">Nombre jugador Rojas</label>
+      <input type="text" id="modalNombreRojo" maxlength="18" placeholder="Ej. Ana">
+    </div>
+
+    <div class="campo-modal" id="campoNombreNegro">
+      <label for="modalNombreNegro">Nombre jugador Negras</label>
+      <input type="text" id="modalNombreNegro" maxlength="18" placeholder="Ej. Luis">
+    </div>
+
+    <div class="campo-modal" id="campoDificultad">
+      <label for="modalDificultad">Dificultad del bot</label>
+      <select id="modalDificultad">
+        <option value="1">Fácil</option>
+        <option value="3" selected>Medio</option>
+        <option value="5">Difícil</option>
+      </select>
+    </div>
+
+    <div class="campo-modal-bot-info" id="infoBot">
+      <span class="avatar-bot" id="modalAvatarBot"><img src="img/bots/aplastador.png" alt=""></span>
+      <div class="info-bot-texto">
+        <span class="etiqueta-bot">Tu rival</span>
+        <span class="nombre-bot" id="modalNombreBotTexto">—</span>
+      </div>
+      <button type="button" class="boton-reroll" id="botonRerollBot" title="Otro bot aleatorio">🎲</button>
+    </div>
+
+    <button id="botonComenzar" type="button" class="boton-comenzar">Comenzar Partida</button>
+  </div>
 </div>
 
 <script src="js/bot.js"></script>
