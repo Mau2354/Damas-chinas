@@ -1,0 +1,25 @@
+/* Tema: Glaciar — azul hielo y blanco */
+:root {
+  --bg-top: #274258;
+  --bg-bottom: #0d1b26;
+  --panel-top: #1c3140;
+  --panel-bottom: #0e1c26;
+  --riel-top: #2d4d63;
+  --riel-bottom: #10222d;
+
+  --walnut-dark: #17293a;
+  --walnut-light: #3c5f78;
+  --board-dark: #5f7f97;
+  --board-light: #eef6fb;
+  --brass: #7fd1e0;
+  --brass-bright: #b3ecf5;
+  --brass-shadow: #3f7f8c;
+  --cream: #eaf6fb;
+  --red-piece: #c0392b;
+  --red-piece-light: #e05a45;
+  --black-piece: #12222c;
+  --black-piece-light: #2d4452;
+  --felt-shadow: rgba(0,0,0,0.4);
+  --highlight: rgba(127, 209, 224, 0.55);
+  --move-dot: rgba(127, 209, 224, 0.9);
+}

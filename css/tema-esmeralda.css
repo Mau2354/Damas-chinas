@@ -1,0 +1,25 @@
+/* Tema: Esmeralda — verde profundo y plata */
+:root {
+  --bg-top: #1c4433;
+  --bg-bottom: #071510;
+  --panel-top: #163527;
+  --panel-bottom: #0b1c14;
+  --riel-top: #1f4d38;
+  --riel-bottom: #0a1f16;
+
+  --walnut-dark: #0f2e21;
+  --walnut-light: #2d6b4c;
+  --board-dark: #2f6b46;
+  --board-light: #eef3e6;
+  --brass: #9fc9b8;
+  --brass-bright: #c9ecd9;
+  --brass-shadow: #4d7a67;
+  --cream: #eaf6ef;
+  --red-piece: #a8351f;
+  --red-piece-light: #d1502f;
+  --black-piece: #10201a;
+  --black-piece-light: #2c453a;
+  --felt-shadow: rgba(0,0,0,0.45);
+  --highlight: rgba(159, 201, 184, 0.55);
+  --move-dot: rgba(159, 201, 184, 0.9);
+}
