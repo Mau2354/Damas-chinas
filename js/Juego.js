@@ -14,7 +14,7 @@
     { nombre: 'Faust', avatar: 'img/bots/Faust.jpg' },
     { nombre: 'Mini', avatar: 'img/bots/MiniFaust.png'},
     { nombre: 'Slayer', avatar: 'img/bots/Slayer.jpg' },
-    { nombre: 'Kirby', avatar: 'img/bots/Kirby.png' },
+    { nombre: 'Kirby', avatar: 'img/bots/kirby.png' },
     { nombre: 'Fog', avatar: 'img/bots/Fog.jpg' },
     { nombre: 'Sardi', avatar: 'img/bots/Sardi.jpg' },
     { nombre: 'Mago', avatar: 'img/bots/Mago.jpg' },
