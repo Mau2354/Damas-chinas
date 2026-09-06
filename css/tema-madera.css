@@ -1,0 +1,24 @@
+:root {
+  --bg-top: #4a2f1f;
+  --bg-bottom: #241108;
+  --panel-top: #2e1c11;
+  --panel-bottom: #1d1109;
+  --riel-top: #5f361d;
+  --riel-bottom: #311b0c;
+
+  --walnut-dark: #3a2418;
+  --walnut-light: #6b4530;
+  --board-dark: #5c3a24;
+  --board-light: #e8d0a9;
+  --brass: #c9a24b;
+  --brass-bright: #e8c064;
+  --brass-shadow: #7d5f28;
+  --cream: #f4ead9;
+  --red-piece: #a8351f;
+  --red-piece-light: #d1502f;
+  --black-piece: #1c1410;
+  --black-piece-light: #3d322a;
+  --felt-shadow: rgba(0,0,0,0.45);
+  --highlight: rgba(201, 162, 75, 0.55);
+  --move-dot: rgba(201, 162, 75, 0.9);
+}
